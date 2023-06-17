@@ -1,6 +1,6 @@
 import 'package:crypto/View/io.dart';
-import 'package:crypto/View/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 
 
@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: IO(),
     );

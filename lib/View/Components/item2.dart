@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class Item2 extends StatelessWidget {
   var item;
-  Item2({this.item});
+  Item2({super.key, this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -30,14 +30,11 @@ class Item2 extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                  height: myHeight * 0.035, child: Image.network(item.image)),
               SizedBox(
-                height: myHeight * 0.02,
-              ),
+                  height: myHeight * 0.035, child: Image.network(item.image)),
               Text(
                 item.id,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: myHeight * 0.01,
@@ -46,13 +43,12 @@ class Item2 extends StatelessWidget {
                 children: [
                   Text(
                     item.priceChange24H.toString().contains('-')
-                        ? "-\$" +
-                            item.priceChange24H
+                        ? "-\$${item.priceChange24H
                                 .toStringAsFixed(2)
                                 .toString()
-                                .replaceAll('-', '')
+                                .replaceAll('-', '')}"
                         : "\$" + item.priceChange24H.toStringAsFixed(2),
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                         color: Colors.grey),

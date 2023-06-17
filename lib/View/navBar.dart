@@ -14,16 +14,15 @@ class _NavBarState extends State<NavBar> {
   int _currentIndex = 0;
 
   List<Widget> pages = [
-    Home(),
-    AnotherPage(),
-    AnotherPage(),
-    AnotherPage(),
+    const Home(),
+    const AnotherPage(),
+    const AnotherPage(),
+    const AnotherPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     double myHeight = MediaQuery.of(context).size.height;
-    double myWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -50,7 +49,7 @@ class _NavBarState extends State<NavBar> {
                   activeIcon: Image.asset(
                     'assets/icons/1.2.png',
                     height: myHeight * 0.03,
-                    color: Color(0xffFBC700),
+                    color: const Color(0xffFBC700),
                   )),
               BottomNavigationBarItem(
                   icon: Image.asset(
@@ -62,7 +61,7 @@ class _NavBarState extends State<NavBar> {
                   activeIcon: Image.asset(
                     'assets/icons/2.2.png',
                     height: myHeight * 0.03,
-                    color: Color(0xffFBC700),
+                    color: const Color(0xffFBC700),
                   )),
               BottomNavigationBarItem(
                   icon: Image.asset(
@@ -74,7 +73,7 @@ class _NavBarState extends State<NavBar> {
                   activeIcon: Image.asset(
                     'assets/icons/3.2.png',
                     height: myHeight * 0.03,
-                    color: Color(0xffFBC700),
+                    color: const Color(0xffFBC700),
                   )),
               BottomNavigationBarItem(
                   icon: Image.asset(
@@ -86,7 +85,7 @@ class _NavBarState extends State<NavBar> {
                   activeIcon: Image.asset(
                     'assets/icons/4.2.png',
                     height: myHeight * 0.03,
-                    color: Color(0xffFBC700),
+                    color: const Color(0xffFBC700),
                   )),
             ]),
       ),

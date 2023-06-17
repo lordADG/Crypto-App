@@ -30,7 +30,7 @@ class Item extends StatelessWidget {
                 children: [
                   Text(
                     item.id,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   Text(
                     '0.4 ' + item.symbol,
@@ -41,9 +41,6 @@ class Item extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            SizedBox(
-              width: myWidth * 0.01,
             ),
             Expanded(
               flex: 2,
@@ -68,7 +65,7 @@ class Item extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: myWidth * 0.04,
+              width: myWidth * 0.01,
             ),
             Expanded(
               flex: 2,
@@ -77,7 +74,7 @@ class Item extends StatelessWidget {
                 children: [
                   Text(
                     '\$ ' + item.currentPrice.toString(),
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   Row(
                     children: [
@@ -90,18 +87,18 @@ class Item extends StatelessWidget {
                                     .replaceAll('-', '')
                             : "\$" + item.priceChange24H.toStringAsFixed(2),
                         style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 13,
                             fontWeight: FontWeight.normal,
                             color: Colors.grey),
                       ),
                       SizedBox(
-                        width: myWidth * 0.03,
+                        width: myWidth * 0.01,
                       ),
                       Text(
                         item.marketCapChangePercentage24H.toStringAsFixed(2) +
                             '%',
                         style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 12,
                             fontWeight: FontWeight.normal,
                             color: item.marketCapChangePercentage24H >= 0
                                 ? Colors.green

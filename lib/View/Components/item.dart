@@ -98,7 +98,7 @@ class Item extends StatelessWidget {
                         item.marketCapChangePercentage24H.toStringAsFixed(2) +
                             '%',
                         style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 10,
                             fontWeight: FontWeight.normal,
                             color: item.marketCapChangePercentage24H >= 0
                                 ? Colors.green
